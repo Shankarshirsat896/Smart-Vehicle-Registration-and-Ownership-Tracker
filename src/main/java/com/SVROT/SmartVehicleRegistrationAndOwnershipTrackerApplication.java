@@ -9,6 +9,7 @@ public class SmartVehicleRegistrationAndOwnershipTrackerApplication {
 	public static void main(String[] args) {
         System.out.println("Ajay");
 		SpringApplication.run(SmartVehicleRegistrationAndOwnershipTrackerApplication.class, args);
+
 	}
 
 }
