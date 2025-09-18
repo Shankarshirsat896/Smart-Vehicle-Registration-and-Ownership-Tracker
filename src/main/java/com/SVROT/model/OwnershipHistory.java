@@ -2,6 +2,8 @@ package com.SVROT.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDateTime;
 
@@ -12,7 +14,13 @@ public class OwnershipHistory {
     private Long id;
 
     private Vehicle vehicle;
+
+    @ManyToOne
+    @JoinColumn(name = "old_owner_id")
     private Owner oldOwner;
+
+    @ManyToOne
+    @JoinColumn(name = "new_owner_id")
     private Owner newOwner;
     private LocalDateTime transferDate;
 

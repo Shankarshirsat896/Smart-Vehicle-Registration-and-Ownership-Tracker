@@ -1,7 +1,11 @@
 package com.SVROT.model;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
+
+import java.util.List;
 
 @Entity
 public class Owner {
@@ -13,6 +17,9 @@ public class Owner {
     private String email;
     private String mobileNumber;
     private String address;
+
+    @OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
+    private List<Vehicle> vehicles;
 
     public Long getId() {
         return id;
@@ -52,5 +59,13 @@ public class Owner {
 
     public void setAddress(String address) {
         this.address = address;
+    }
+
+    public List<Vehicle> getVehicles() {
+        return vehicles;
+    }
+
+    public void setVehicles(List<Vehicle> vehicles) {
+        this.vehicles = vehicles;
     }
 }

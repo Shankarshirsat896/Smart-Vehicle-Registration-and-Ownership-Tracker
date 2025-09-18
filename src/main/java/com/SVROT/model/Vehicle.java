@@ -2,6 +2,8 @@ package com.SVROT.model;
 
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
+import jakarta.persistence.ManyToOne;
 
 import java.time.LocalDateTime;
 
@@ -17,6 +19,9 @@ public class Vehicle {
     private String color;
     private LocalDateTime createdAt;
     private LocalDateTime lastRenewed;
+
+    @ManyToOne
+    @JoinColumn(name = "owner_id")
     private Owner owner;
 
     public Long getId() {
