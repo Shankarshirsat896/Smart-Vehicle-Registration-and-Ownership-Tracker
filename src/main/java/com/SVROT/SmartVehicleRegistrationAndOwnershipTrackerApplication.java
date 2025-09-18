@@ -1,4 +1,4 @@
-package com.VROMS;
+package com.SVROT;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -7,8 +7,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class SmartVehicleRegistrationAndOwnershipTrackerApplication {
 
 	public static void main(String[] args) {
-        System.out.println("Ajay");
-    main
+
 		SpringApplication.run(SmartVehicleRegistrationAndOwnershipTrackerApplication.class, args);
 
 	}
